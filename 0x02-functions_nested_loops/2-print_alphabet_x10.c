@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * print_alphabet - Prints the alphabet, in lowercase x10
+ * print_alphabet_x10 - Prints the alphabet, in lowercase x10
  * Description: Prints the alphabet, in lowercase, ten times followed by a
  * new line
  *
@@ -22,5 +22,6 @@ void print_alphabet_x10(void)
 			i++;
 		}
 		_putchar('\n');
+		i = 97;
 	}
 }
