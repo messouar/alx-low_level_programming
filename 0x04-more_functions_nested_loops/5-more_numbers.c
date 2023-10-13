@@ -29,7 +29,7 @@ void more_numbers(void)
 			_putchar(i);
 			i++;
 
-			if (i == 57)
+			if (i > 57)
 			{
 				i = 48;
 				max = 52;
