@@ -10,18 +10,32 @@
 
 void more_numbers(void)
 {
-	int i = 0;
+	int i = 48;
 	int c = 0;
+	int flag;
+	int max = 57;
 
 	for (c = 0; c < 10; c++)
 	{
-		for (i = 48; i <= 57; i++)
-			_putchar(i);
-
-		for (i = 48; i <= 52; i++)
+		flag = 0;
+		i = 48;
+		max = 57;
+		
+		while(i <= max)
 		{
-			_putchar(49);
+			if (flag == 1)
+				_putchar(49);
+			
 			_putchar(i);
+			i++;
+
+			if (i == 57)
+			{
+				i = 48;
+				max = 52;
+				flag = 1;
+			}
+
 		}
 
 		_putchar('\n');
