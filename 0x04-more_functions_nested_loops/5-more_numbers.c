@@ -20,12 +20,12 @@ void more_numbers(void)
 		flag = 0;
 		i = 48;
 		max = 57;
-		
-		while(i <= max)
+
+		while (i <= max)
 		{
 			if (flag == 1)
 				_putchar(49);
-			
+
 			_putchar(i);
 			i++;
 
