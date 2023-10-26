@@ -18,8 +18,11 @@ char *_strcat(char *dest, char *src)
 	if (dest == NULL || src == NULL)
 		return (NULL);
 
-	l1 = strlen(dest);
-	l2 = strlen(src);
+	while (*(dest + l1) != '\0')
+		l1++;
+
+	while (*(src + l2) != '\0')
+		l2++;
 
 	i = l1;
 
