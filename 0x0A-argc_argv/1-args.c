@@ -2,7 +2,7 @@
 
 /**
  * main - Entry point
- * Description: program that prints its name, followed by a new line.
+ * Description: program that prints number of arguments
  * @argc: number of passed arguments
  * @argv: pointer to array of strings
  *
