@@ -30,6 +30,7 @@ int **alloc_grid(int width, int height)
 			for (counter--; counter >= 0; counter--)
 				free(biDimentionArray[counter]);
 
+			free(*biDimentionArray);
 			free(biDimentionArray);
 			return (NULL);
 		}
