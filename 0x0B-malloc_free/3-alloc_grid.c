@@ -27,8 +27,8 @@ int **alloc_grid(int width, int height)
 
 		if (biDimentionArray[counter] == NULL)
 		{
-			for (; counter >= 0; counter--)
-				free (biDimentionArray[counter]);
+			for (counter--; counter >= 0; counter--)
+				free(biDimentionArray[counter]);
 
 			free(biDimentionArray);
 			return (NULL);
