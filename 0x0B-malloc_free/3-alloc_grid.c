@@ -22,12 +22,17 @@ int **alloc_grid(int width, int height)
 		return (NULL);
 
 	for (counter = 0; counter < height; counter++)
+	{
 		biDimentionArray[counter] = calloc(width, sizeof(**biDimentionArray));
 
-	if (*biDimentionArray == NULL)
-	{
-		free(biDimentionArray);
-		return (NULL);
+		if (biDimentionArray[counter] == NULL)
+		{
+			for (; counter >= 0; counter--)
+				free (biDimentionArray[counter]);
+
+			free(biDimentionArray);
+			return (NULL);
+		}
 	}
 
 	return (biDimentionArray);
