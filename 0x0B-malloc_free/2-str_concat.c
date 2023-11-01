@@ -25,18 +25,18 @@ char *str_concat(char *s1, char *s2)
 	else
 		s2Length = strlen(s2);
 
-	 concatenatedString = calloc(s1Length + s2Length + 1, sizeof(char));
+	concatenatedString = calloc(s1Length + s2Length + 1, sizeof(char));
 
-	 if (concatenatedString == NULL)
-		 return (NULL);
+	if (concatenatedString == NULL)
+		return (NULL);
 
-	 for (counter = 0; counter < s1Length; counter++)
-		 concatenatedString[counter] = s1[counter];
+	for (counter = 0; counter < s1Length; counter++)
+		concatenatedString[counter] = s1[counter];
 
-	 for (counter = 0; counter < s2Length; counter++)
-          concatenatedString[counter + s1Length] = s2[counter];
+	for (counter = 0; counter < s2Length; counter++)
+		concatenatedString[counter + s1Length] = s2[counter];
 
-	 concatenatedString[counter + s1Length] = '\0';
+	concatenatedString[counter + s1Length] = '\0';
 
-	 return (concatenatedString);
+	return (concatenatedString);
 }
