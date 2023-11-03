@@ -10,16 +10,17 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *allocatedArray = NULL;
-	unsigned int counter = 0;
+	void *ptr;
 
-	allocatedArray = malloc(nmemb * size);
-
-	if (allocatedArray == NULL || nmemb == 0 || size == 0)
+	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	for (counter = 0; counter < (nmemb * size); counter++)
-		allocatedArray[counter] = 0;
+	ptr = malloc(nmemb * size);
+	if (ptr == NULL)
+		return (NULL);
 
-	return (allocatedArray);
+	/* Initialize the allocated memory to zero */
+	memset(ptr, 0, nmemb * size);
+
+	return (ptr);
 }
