@@ -7,7 +7,8 @@
  * Return: void
  */
 
-void main(void)
+int main(void)
 {
-	ptintf("%s", __FILE__);
+	printf("%s", __FILE__);
+	return (0);
 }
