@@ -23,7 +23,8 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	va_start(argumentsList, n);
 
-	separatorLength = strlen(separator);
+	if (separator != NULL)
+		separatorLength = strlen(separator);
 
 	while (counter < n)
 	{
